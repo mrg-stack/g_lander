@@ -1,6 +1,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: "Space Grotesk", sans-serif;
   color: #eaf1ff;
   /* Animated gradient background with purple shades */
@@ -27,14 +28,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.6rem;
+  padding: 1rem;
 }
 
 .quick-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
+  max-width: min(980px, 96vw);
 }
 
 .icon-link {
@@ -92,17 +97,30 @@ body {
 }
 
 @media (max-width: 680px) {
-  .quick-links {
-    gap: 0.7rem;
+  .page {
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 0.75rem;
   }
+
+  .quick-links {
+    gap: 0.65rem;
+    max-width: 100%;
+  }
+
   .icon-link {
     width: 3rem;
     height: 3rem;
   }
-  .icon-link .bi,
-  .icon-link img {
+
+  .icon-link .bi {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .icon-link img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -110,13 +128,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2.2rem;
+  width: min(560px, 94vw);
   gap: 0.5rem;
 }
 
 .search-bar input[type="text"] {
-  width: 18rem;
-  max-width: 80vw;
+  flex: 1;
+  width: auto;
+  max-width: none;
   padding: 0.7rem 1.1rem;
   border-radius: 2rem;
   border: none;
