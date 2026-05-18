@@ -61,6 +61,10 @@
       <script>
         // Auto-select the search bar input on page/tab open
         window.addEventListener('DOMContentLoaded', function() {
+          if (window.matchMedia('(max-width: 680px)').matches) {
+            return;
+          }
+
           var searchInput = document.getElementById('duckduckgo-search');
           if (searchInput) {
             searchInput.focus();
