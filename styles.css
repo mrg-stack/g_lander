@@ -77,6 +77,12 @@ body {
   display: block;
 }
 
+.icon-link-copilot .icon-favicon {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
 .icon-link-budget {
   background: #1f8f4c;
 }
