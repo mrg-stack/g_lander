@@ -25,7 +25,7 @@
           <span class="bi bi-file-spreadsheet"></span>
         </a>
         <a class="icon-link" href="https://dr.dk" target="_blank" rel="noopener noreferrer" aria-label="DR News" title="DR News">
-          <span>02</span>
+          <img src="https://i.ibb.co/c6n2vbW/512px-DR-TV-logo-svg.png" alt="DR Logo" class="icon-favicon" style="object-fit:contain;width:100%;height:100%;background:#000;border-radius:50%;" />
         </a>
         <a class="icon-link" href="https://nyheder.tv2.dk/" target="_blank" rel="noopener noreferrer" aria-label="TV 2 Nyheder" title="TV 2 Nyheder">
           <span>03</span>
@@ -49,6 +49,22 @@
           <span>09</span>
         </a>
       </nav>
+      <form class="search-bar" action="https://duckduckgo.com/" method="GET" target="_blank" autocomplete="off">
+        <input id="duckduckgo-search" name="q" type="text" placeholder="Search DuckDuckGo..." aria-label="Search DuckDuckGo" autofocus required />
+        <button type="submit" aria-label="Search">
+          <span class="bi bi-search"></span>
+        </button>
+      </form>
+      <script>
+        // Auto-select the search bar input on page/tab open
+        window.addEventListener('DOMContentLoaded', function() {
+          var searchInput = document.getElementById('duckduckgo-search');
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+          }
+        });
+      </script>
     </main>
 
     <script src="app.js" defer></script>
