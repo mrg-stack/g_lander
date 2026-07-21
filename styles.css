@@ -1,10 +1,11 @@
+/* Base page layout and animated background. */
 body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
   font-family: "Space Grotesk", sans-serif;
   color: #eaf1ff;
-  /* Animated gradient background with purple shades */
+  /* Multi-stop animated gradient backdrop. */
   background: linear-gradient(135deg, #2d174c, #14213a, #5a189a, #22304a, #1d2a44, #22304a);
   background-size: 400% 400%;
   animation: gradientShift 30s ease-in-out infinite;
@@ -32,6 +33,7 @@ body {
   padding: 1rem;
 }
 
+/* Launcher row/grid containing all quick links. */
 .quick-links {
   display: flex;
   flex-direction: row;
@@ -42,6 +44,7 @@ body {
   max-width: min(980px, 96vw);
 }
 
+/* Shared visual style for each circular launcher button. */
 .icon-link {
   width: 4rem;
   height: 4rem;
@@ -82,10 +85,41 @@ body {
   display: block;
 }
 
+.icon-link .icon-favicon-auto {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
 .icon-link-copilot .icon-favicon {
   width: 85%;
   height: 85%;
   object-fit: contain;
+}
+
+.icon-link-lapresse {
+  background: #ed1c23;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon-link-lapresse .icon-favicon {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.icon-link-cnn {
+  background: #ffffff;
+}
+
+.icon-link-cnn .icon-favicon {
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .icon-link-budget {
@@ -96,6 +130,7 @@ body {
   background: #ff0000;
 }
 
+/* Compact behavior for smaller screens. */
 @media (max-width: 680px) {
   .page {
     justify-content: center;
@@ -126,8 +161,10 @@ body {
     width: 100%;
     height: 100%;
   }
+
 }
 
+/* Portrait-specific tightening for better thumb reach. */
 @media (max-width: 680px) and (orientation: portrait) {
   .page {
     justify-content: flex-start;
@@ -158,6 +195,7 @@ body {
   }
 }
 
+/* Search form aligned with launcher width on all breakpoints. */
 .search-bar {
   display: flex;
   justify-content: center;

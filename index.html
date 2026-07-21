@@ -19,7 +19,7 @@
   </head>
   <body>
     <main class="page">
-      <!-- Simple horizontal launcher with icon-only links. -->
+      <!-- Quick launcher: icon-only links for frequent destinations. -->
       <nav class="quick-links" aria-label="Quick website links">
         <a class="icon-link icon-link-budget" data-no-favicon="true" href="https://docs.proton.me/u/1/sheet?mode=open&volumeId=lYEZIf0XVWHwk3YkPxmNYA&linkId=Y-3PbEetr2YSVXhCH70Mrw" target="_blank" rel="noopener noreferrer" aria-label="Budget" title="Budget">
           <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proton-sheets.svg" alt="Budget" class="icon-favicon" />
@@ -28,16 +28,16 @@
           <img src="https://upload.wikimedia.org/wikipedia/en/a/aa/Microsoft_Copilot_Icon.svg" alt="Copilot" class="icon-favicon" />
         </a>
         <a class="icon-link" href="https://dr.dk" target="_blank" rel="noopener noreferrer" aria-label="DR News" title="DR News">
-          <img src="https://i.ibb.co/c6n2vbW/512px-DR-TV-logo-svg.png" alt="DR Logo" class="icon-favicon" style="object-fit:contain;width:100%;height:100%;background:#000;border-radius:50%;" />
+          <img src="https://i.ibb.co/c6n2vbW/512px-DR-TV-logo-svg.png" alt="DR Logo" class="icon-favicon" />
         </a>
-        <a class="icon-link" href="https://nyheder.tv2.dk/" target="_blank" rel="noopener noreferrer" aria-label="TV 2 Nyheder" title="TV 2 Nyheder">
-          <span>03</span>
+        <a class="icon-link" data-no-favicon="true" href="https://nyheder.tv2.dk/" target="_blank" rel="noopener noreferrer" aria-label="TV 2 Nyheder" title="TV 2 Nyheder">
+          <img src="https://coreui.tv2a.dk/favicons/white_background/apple_touch_icon.png" alt="TV 2 Nyheder" class="icon-favicon" style="object-fit:contain;width:100%;height:100%;" />
         </a>
-        <a class="icon-link" href="https://lapresse.ca" target="_blank" rel="noopener noreferrer" aria-label="La Presse" title="La Presse">
-          <span>04</span>
+        <a class="icon-link icon-link-lapresse" data-no-favicon="true" href="https://lapresse.ca" target="_blank" rel="noopener noreferrer" aria-label="La Presse" title="La Presse">
+          <img src="https://static.lpcdn.ca/lpweb/mobile/img/la-presse-logo-web.svg" alt="La Presse" class="icon-favicon" />
         </a>
-        <a class="icon-link" href="https://cnn.com" target="_blank" rel="noopener noreferrer" aria-label="CNN" title="CNN">
-          <span>05</span>
+        <a class="icon-link icon-link-cnn" data-no-favicon="true" href="https://cnn.com" target="_blank" rel="noopener noreferrer" aria-label="CNN" title="CNN">
+          <img src="https://edition.cnn.com/media/sites/cnn/cnn.svg" alt="CNN" class="icon-favicon" />
         </a>
         <a class="icon-link" href="https://theguardian.com" target="_blank" rel="noopener noreferrer" aria-label="The Guardian" title="The Guardian">
           <span>06</span>
@@ -55,28 +55,17 @@
           <span>09</span>
         </a>
       </nav>
+
+      <!-- DuckDuckGo search shortcut. -->
       <form class="search-bar" action="https://duckduckgo.com/" method="GET" target="_blank" autocomplete="off">
         <input id="duckduckgo-search" name="q" type="text" placeholder="Search DuckDuckGo..." aria-label="Search DuckDuckGo" autofocus required />
         <button type="submit" aria-label="Search">
           <span class="bi bi-search"></span>
         </button>
       </form>
-      <script>
-        // Auto-select the search bar input on page/tab open
-        window.addEventListener('DOMContentLoaded', function() {
-          if (window.matchMedia('(max-width: 680px)').matches) {
-            return;
-          }
-
-          var searchInput = document.getElementById('duckduckgo-search');
-          if (searchInput) {
-            searchInput.focus();
-            searchInput.select();
-          }
-        });
-      </script>
     </main>
 
+    <!-- Behavior: favicon loading and desktop search auto-focus. -->
     <script src="app.js" defer></script>
   </body>
 </html>

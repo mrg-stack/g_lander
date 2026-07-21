@@ -1,17 +1,18 @@
-# Lander News Landing Page
+# G Lander
 
-Direct RSS landing page with one box per feed and the first 10 titles in each box.
+A lightweight personal start page with:
 
-## How It Works
+- Circular quick-launch links.
+- Automatic favicon loading for links without custom icons.
+- A DuckDuckGo search bar.
 
-1. `app.js` loads RSS URLs from `feeds.txt`.
-2. The page fetches each feed in the browser.
-3. It renders one card per source with up to 10 clickable headlines.
+RSS feed functionality is no longer part of this project.
 
 ## Files
 
-- `index.html`, `styles.css`, `app.js`: landing page UI and logic.
-- `feeds.txt`: RSS source list (one URL per line).
+- `index.html`: page structure and links.
+- `styles.css`: visual style, layout, and responsiveness.
+- `app.js`: search focus behavior and favicon loading.
 
 ## Local Run
 
@@ -19,18 +20,10 @@ Direct RSS landing page with one box per feed and the first 10 titles in each bo
 python -m http.server 8080
 ```
 
-Open `http://localhost:8080`.
-
-## GitHub Pages
-
-1. Push to GitHub.
-2. In repository Settings -> Pages.
-3. Deploy from branch `main`, folder `/ (root)`.
+Then open http://localhost:8080.
 
 ## Customize
 
-- Add/remove feeds in `feeds.txt`.
-- Change titles per feed in `app.js` via `TITLES_PER_FEED`.
-- Adjust design in `styles.css`.
-
-Note: Opening `index.html` as `file://` blocks network requests in most browsers. Use a local server or GitHub Pages.
+- Add, remove, or reorder launcher links in `index.html`.
+- Tweak spacing, colors, and breakpoints in `styles.css`.
+- Adjust interaction behavior in `app.js`.
