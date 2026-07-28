@@ -133,62 +133,29 @@ body {
   border-radius: 0;
 }
 
-.icon-link-macrumors {
-  background: #ffffff;
-}
-
-.icon-link-macrumors .icon-favicon {
-  width: 84%;
-  height: 84%;
-  object-fit: contain;
-  border-radius: 0;
-}
-
-.icon-link-nintendolife {
-  background: #1b1b1b;
-}
-
-.icon-link-nintendolife .icon-favicon {
-  width: 84%;
-  height: 84%;
-  object-fit: contain;
-  border-radius: 0;
-}
-
 .icon-link-budget {
   background: #1f8f4c;
 }
 
-.icon-link-retrohandhelds {
-  background: #33358c;
-}
-
-.icon-link-retrohandhelds .icon-favicon,
-.icon-link-youtube .icon-favicon {
-  width: 84%;
-  height: 84%;
-  object-fit: contain;
-  border-radius: 0;
-}
-
-.icon-link-retrohandhelds .icon-favicon {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.icon-link-youtube {
-  background: #ffffff;
-}
-
 .icon-link[href*="youtube.com"] {
-  background: #ffffff;
+  background: #ff0000;
 }
 
 /* Site-specific size tuning for logos with excessive built-in padding. */
 .icon-link[href*="dr.dk"] .icon-favicon {
   transform: scale(1.32);
   transform-origin: center;
+}
+
+.icon-link[href*="nintendolife.com"] .icon-favicon-auto,
+.icon-link[href*="retrohandhelds.gg"] .icon-favicon-auto {
+  width: 44px;
+  height: 44px;
+}
+
+.icon-link[href*="youtube.com"] .icon-favicon-auto {
+  width: 52px;
+  height: 52px;
 }
 
 /* Compact behavior for smaller screens. */
