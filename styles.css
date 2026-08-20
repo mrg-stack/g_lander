@@ -61,6 +61,32 @@ body {
   overflow: hidden;
 }
 
+.icon-link.is-sortable {
+  cursor: grab;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.quick-links.is-sorting .icon-link.is-sortable {
+  transition: transform 0.1s ease;
+}
+
+.icon-link.is-dragging {
+  cursor: grabbing;
+  transform: scale(1.08);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.28);
+}
+
+.icon-placeholder {
+  border: 2px dashed rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+}
+
+body.is-sorting {
+  user-select: none;
+}
+
 .icon-link:hover,
 .icon-link:focus-visible {
   transform: scale(1.08);
@@ -157,6 +183,32 @@ body {
 
 .icon-link-budget {
   background: #1f8f4c;
+}
+
+.icon-link-immich {
+  background: #ffffff;
+}
+
+.icon-link-immich .icon-favicon {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.icon-link-jellyfin,
+.icon-link-threadfin,
+.icon-link-ersatztv {
+  background: #000000;
+}
+
+.icon-link-jellyfin .icon-favicon,
+.icon-link-threadfin .icon-favicon,
+.icon-link-ersatztv .icon-favicon {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .icon-link-retrohandhelds {
