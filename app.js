@@ -1198,12 +1198,14 @@ function initServiceMenu() {
   const closeMenu = () => {
     menu.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
   };
 
   toggle.addEventListener("click", (event) => {
     event.stopPropagation();
     const isOpen = menu.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    menu.setAttribute("aria-hidden", String(!isOpen));
   });
 
   document.addEventListener("click", (event) => {
