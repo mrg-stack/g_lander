@@ -1188,8 +1188,40 @@ function enableQuickLinkSorting() {
   });
 }
 
+function initServiceMenu() {
+  const toggle = document.querySelector(".service-menu-toggle");
+  const menu = document.getElementById("service-menu");
+  if (!toggle || !menu) {
+    return;
+  }
+
+  const closeMenu = () => {
+    menu.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = menu.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   enableQuickLinkSorting();
   initSearchFocus();
   initFavicons();
+  initServiceMenu();
 });

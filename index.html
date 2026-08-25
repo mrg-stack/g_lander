@@ -18,6 +18,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <button class="service-menu-toggle" type="button" aria-label="Open services menu" aria-expanded="false" aria-haspopup="true" title="Services">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="service-menu" id="service-menu" aria-label="Media services">
+      <a class="service-menu-link" data-no-favicon="true" href="http://harlock3.tail5caeba.ts.net:8096" target="_blank" rel="noopener noreferrer" aria-label="Jellyfin" title="Jellyfin">
+        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" alt="Jellyfin" class="icon-favicon" />
+      </a>
+
+      <a class="service-menu-link" data-no-favicon="true" href="http://harlock3.tail5caeba.ts.net:32400/web" target="_blank" rel="noopener noreferrer" aria-label="Plex" title="Plex">
+        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/plex.svg" alt="Plex" class="icon-favicon" />
+      </a>
+
+      <a class="service-menu-link" data-no-favicon="true" href="http://harlock3.tail5caeba.ts.net:34400" target="_blank" rel="noopener noreferrer" aria-label="Threadfin" title="Threadfin">
+        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/threadfin.svg" alt="Threadfin" class="icon-favicon" />
+      </a>
+
+      <a class="service-menu-link" data-no-favicon="true" href="http://harlock3.tail5caeba.ts.net:8409" target="_blank" rel="noopener noreferrer" aria-label="ErsatzTV" title="ErsatzTV">
+        <img src="logos/ersatztv.svg" alt="ErsatzTV" class="icon-favicon" />
+      </a>
+    </div>
+
     <main class="page">
       <!-- Quick launcher: icon-only links for frequent destinations. -->
       <nav class="quick-links" aria-label="Quick website links">
@@ -26,7 +50,7 @@
           <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proton-sheets.svg" alt="Budget" class="icon-favicon" />
         </a>
         <!-- Immich -->
-        <a class="icon-link icon-link-immich" data-no-favicon="true" href="http://100.76.192.87:2283/photos" target="_blank" rel="noopener noreferrer" aria-label="Immich" title="Immich">
+        <a class="icon-link icon-link-immich" data-no-favicon="true" href="http://harlock3.tail5caeba.ts.net:2283/photos" target="_blank" rel="noopener noreferrer" aria-label="Immich" title="Immich">
           <img src="https://raw.githubusercontent.com/immich-app/immich/refs/heads/main/design/immich-logo.svg" alt="Immich" class="icon-favicon" />
         </a>
 
@@ -36,7 +60,7 @@
         </a>
         <!-- DR News -->
         <a class="icon-link" href="https://dr.dk" target="_blank" rel="noopener noreferrer" aria-label="DR News" title="DR News">
-          <img src="https://i.ibb.co/c6n2vbW/512px-DR-TV-logo-svg.png" alt="DR Logo" class="icon-favicon" />
+          <img src="https://api.faviconkit.com/dr.dk/32" alt="DR Logo" class="icon-favicon icon-favicon-auto" />
         </a>
         <!-- TV 2 Nyheder -->
         <a class="icon-link" data-no-favicon="true" href="https://nyheder.tv2.dk/" target="_blank" rel="noopener noreferrer" aria-label="TV 2 Nyheder" title="TV 2 Nyheder">
@@ -69,25 +93,6 @@
         <!-- YouTube -->
         <a class="icon-link icon-link-youtube" data-no-favicon="true" href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
           <img src="https://cdn.simpleicons.org/youtube/ff0000" alt="YouTube" class="icon-favicon" />
-        </a>
-        <!-- Jellyfin -->
-        <a class="icon-link icon-link-jellyfin" data-no-favicon="true" href="http://100.76.192.87:8096" target="_blank" rel="noopener noreferrer" aria-label="Jellyfin" title="Jellyfin">
-          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" alt="Jellyfin" class="icon-favicon" />
-        </a>
-
-        <!-- Plex -->
-        <a class="icon-link" data-no-favicon="true" href="http://100.76.192.87:32400/web" target="_blank" rel="noopener noreferrer" aria-label="Plex" title="Plex">
-          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/plex.svg" alt="Plex" class="icon-favicon" />
-        </a>
-
-        <!-- Threadfin -->
-        <a class="icon-link icon-link-threadfin" data-no-favicon="true" href="http://100.76.192.87:34400" target="_blank" rel="noopener noreferrer" aria-label="Threadfin" title="Threadfin">
-          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/threadfin.svg" alt="Threadfin" class="icon-favicon" />
-        </a>
-
-        <!-- Ersatztv -->
-        <a class="icon-link icon-link-ersatztv" data-no-favicon="true" href="http://100.76.192.87:8409" target="_blank" rel="noopener noreferrer" aria-label="ErsatzTV" title="ErsatzTV">
-          <img src="logos/ersatztv.svg" alt="ErsatzTV" class="icon-favicon" />
         </a>
       </nav>
 
