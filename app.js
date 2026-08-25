@@ -1221,9 +1221,27 @@ function initServiceMenu() {
   });
 }
 
+function initVlcLinks() {
+  document.querySelectorAll("[data-vlc-url]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const playlistUrl = link.dataset.vlcUrl;
+      if (!playlistUrl) {
+        return;
+      }
+
+      event.preventDefault();
+      window.location.href = `vlc://${playlistUrl}`;
+      window.setTimeout(() => {
+        window.open(playlistUrl, "_blank", "noopener,noreferrer");
+      }, 700);
+    });
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   enableQuickLinkSorting();
   initSearchFocus();
   initFavicons();
   initServiceMenu();
+  initVlcLinks();
 });
