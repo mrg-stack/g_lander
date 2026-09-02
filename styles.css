@@ -443,14 +443,12 @@ body.is-sorting {
 }
 
 .icon-link-jellyfin,
-.icon-link-threadfin,
-.icon-link-ersatztv {
+.icon-link-threadfin {
   background: #000000;
 }
 
 .icon-link-jellyfin .icon-favicon,
-.icon-link-threadfin .icon-favicon,
-.icon-link-ersatztv .icon-favicon {
+.icon-link-threadfin .icon-favicon {
   width: 72%;
   height: 72%;
   object-fit: contain;
